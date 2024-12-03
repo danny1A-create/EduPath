@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduPath - Your Path to Success</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="carousel">
+        <div class="slide">
+            <img src="image1.jpg" alt="Slide 1">
+        </div>
+        <div class="slide">
+            <img src="image2.jpg" alt="Slide 2">
+        </div>
+        <div class="slide">
+            <img src="image3.jpg" alt="Slide 3">
+        </div>
+    </div>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">EduPath</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <img src="https://images.pexels.com/photos/247839/pexels-photo-247839.jpeg?auto=compress&cs=tinysrgb&w=600" alt="EduPath Logo" class="hero-image" style="width: 100%;">
+  
+
+        <a href="#programs" class="btn">Explore Programs</a>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="features">
+    <div class="container">
+        <h2>Why Choose EduPath?</h2>
+            <div class="feature">
+                <h3>Expert Instructors</h3>
+                <p>Learn from industry experts with years of experience.</p>
+            </div>
+            <div class="feature">
+                <h3>Flexible Learning</h3>
+                <p>Access courses anytime, anywhere, on any device.</p>
+            </div>
+            <div class="feature">
+                <h3>Certification</h3>
+                <p>Earn certificates to showcase your skills and knowledge.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="programs">
+        <div class="container">
+            <h2>Our Programs</h2>
+            <div class="program-card">
+                <h3>Public Speaking</h3>
+                <p>Overcome stage fear and become a confident speaker.</p>
+            </div>
+            <div class="program-card">
+                <h3>General Knowledge</h3>
+                <p>Boost your awareness of current affairs and global events.</p>
+            </div>
+            <div class="program-card">
+                <h3>Creative Writing</h3>
+                <p>Enhance your writing skills and unleash your creativity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>What People Say</h2>
+            <div class="testimonial">
+                <p>"EduPath helped me improve my confidence and communication skills. Highly recommended!"</p>
+                <h4>- John Doe</h4>
+            </div>
+            <div class="testimonial">
+                <p>"The courses are well-structured and easy to follow. I learned a lot!"</p>
+                <h4>- Jane Smith</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Thank you for contacting us! We will get back to you soon.');
+        this.reset();
+    });
+
+    const slides = document.querySelectorAll('.slide');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        const offset = index * -100; // Calculate offset for transform
+        slides.forEach(slide => {
+            slide.style.transform = `translateX(${offset}%)`;
+        });
+    }
+
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length; // Cycle through slides
+        showSlide(currentIndex);
+    }, 3000); // Slide changes every 3 seconds
+</script>
+S</body>
+</html>
